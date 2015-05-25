@@ -10,7 +10,7 @@
 
 @implementation Kitchen
 
-/*- (Pizza *)makePizzaWithSize:(Size)size toppings:(NSArray *)toppings
+/*- (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings
 {
     
 }*/
