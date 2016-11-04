@@ -31,10 +31,22 @@ int main(int argc, const char * argv[])
             
             NSLog(@"Input was %@", inputString);
             
-            // Take the first word of the command as the size, and the rest as the toppings
+            // separate inputString into array of strings --> commandWords
             NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
             
-            // And then send some message to the kitchen...
+            // set pizzaSize string to the first element in the commandWords array
+            NSString *pizzaSize = [commandWords objectAtIndex:0];
+            
+            // create a mutable copy called toppings
+            NSMutableArray *toppings = [commandWords mutableCopy];
+            
+            // remove pizzaSize element from the toppings array leaving only the toppings intended for the pizza
+            [toppings removeObjectAtIndex:0];
+            
+            // tell restaurant kitchen to make the pizza, pass in the class method to convert pizza size into the enum datatype
+            // pass in toppings array as second parameter
+            Pizza *myPizza = [restaurantKitchen makePizzaWithSize:[Pizza pizzaSizeStringToSize:pizzaSize] toppings:toppings];
+            
         }
 
     }
