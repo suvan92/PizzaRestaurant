@@ -44,8 +44,6 @@ int main(int argc, const char * argv[])
                 restaurantKitchen.delegate = coManager;
                 
                 NSLog(@"Delegate set to comanager");
-            } else {
-                restaurantKitchen.delegate = coManager;
             }
             
             // separate inputString into array of strings --> commandWords
