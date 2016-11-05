@@ -34,7 +34,7 @@ int main(int argc, const char * argv[])
             
             NSLog(@"Input was %@", orderString);
             
-            NSString *managerSelection = [inputHandler inputForPrompt:@"\nPlease enter 'main' for the main manager, 'assistant' for the assistant manager or none for no manager\n> "];
+            NSString *managerSelection = [inputHandler inputForPrompt:@"\nPlease enter 'main' for the main manager, 'assistant' for the assistant manager or 'none' for no manager\n> "];
             
             if ([[managerSelection lowercaseString] isEqualToString:@"main"]) {
                 restaurantKitchen.delegate = manager;

@@ -34,11 +34,21 @@
             
         }
         
+    } else if (self.delegate == nil)  {
+        
+        Pizza *pizza = [[Pizza alloc] initWithSize:size andWithToppings:toppings];
+        
+        return pizza;
+        
+        
+    } else {
+        
+        NSLog(@"We don't make anchovy pizzas when the main manager is in charge");
+        
+        return nil;
+        
     }
     
-    Pizza *pizza = [[Pizza alloc] initWithSize:size andWithToppings:toppings];
-    
-    return pizza;
 }
 
 @end
