@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		140DAE081DCBF55C00E9720C /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 140DAE071DCBF55C00E9720C /* Pizza.m */; };
+		1467F9FC1DCD5F9A00D458D3 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467F9FB1DCD5F9A00D458D3 /* Manager.m */; };
+		1467F9FF1DCD611500D458D3 /* CoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467F9FE1DCD611500D458D3 /* CoManager.m */; };
+		1467FA021DCD620B00D458D3 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467FA011DCD620B00D458D3 /* InputHandler.m */; };
 		6001EC81197B4EC300F97011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6001EC80197B4EC300F97011 /* Foundation.framework */; };
 		6001EC84197B4EC300F97011 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC83197B4EC300F97011 /* main.m */; };
 		6001EC90197B502F00F97011 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001EC8F197B502F00F97011 /* Kitchen.m */; };
@@ -28,6 +31,12 @@
 /* Begin PBXFileReference section */
 		140DAE061DCBF55C00E9720C /* Pizza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		140DAE071DCBF55C00E9720C /* Pizza.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
+		1467F9FA1DCD5F9A00D458D3 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		1467F9FB1DCD5F9A00D458D3 /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		1467F9FD1DCD611500D458D3 /* CoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoManager.h; sourceTree = "<group>"; };
+		1467F9FE1DCD611500D458D3 /* CoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoManager.m; sourceTree = "<group>"; };
+		1467FA001DCD620B00D458D3 /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		1467FA011DCD620B00D458D3 /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		6001EC7D197B4EC300F97011 /* PizzaRestaurant */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurant; sourceTree = BUILT_PRODUCTS_DIR; };
 		6001EC80197B4EC300F97011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6001EC83197B4EC300F97011 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,8 +86,14 @@
 			isa = PBXGroup;
 			children = (
 				6001EC83197B4EC300F97011 /* main.m */,
+				1467FA001DCD620B00D458D3 /* InputHandler.h */,
+				1467FA011DCD620B00D458D3 /* InputHandler.m */,
 				140DAE061DCBF55C00E9720C /* Pizza.h */,
 				140DAE071DCBF55C00E9720C /* Pizza.m */,
+				1467F9FA1DCD5F9A00D458D3 /* Manager.h */,
+				1467F9FB1DCD5F9A00D458D3 /* Manager.m */,
+				1467F9FD1DCD611500D458D3 /* CoManager.h */,
+				1467F9FE1DCD611500D458D3 /* CoManager.m */,
 				6001EC8E197B502F00F97011 /* Kitchen.h */,
 				6001EC8F197B502F00F97011 /* Kitchen.m */,
 				6001EC85197B4EC300F97011 /* Supporting Files */,
@@ -146,8 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				140DAE081DCBF55C00E9720C /* Pizza.m in Sources */,
+				1467FA021DCD620B00D458D3 /* InputHandler.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
+				1467F9FF1DCD611500D458D3 /* CoManager.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,
+				1467F9FC1DCD5F9A00D458D3 /* Manager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

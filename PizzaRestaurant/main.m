@@ -9,30 +9,47 @@
 #import <Foundation/Foundation.h>
 
 #import "Kitchen.h"
+#import "InputHandler.h"
+#import "Manager.h"
+#import "CoManager.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        NSLog(@"Please pick your pizza size and toppings:");
+        Kitchen *restaurantKitchen = [[Kitchen alloc] init];
         
-        Kitchen *restaurantKitchen = [Kitchen new];
+        InputHandler *inputHandler = [[InputHandler alloc] init];
+        
+        Manager *manager = [[Manager alloc] init];
+        
+        CoManager *coManager = [[CoManager alloc] init];
         
         while (TRUE) {
             // Loop forever
             
-            NSLog(@"> ");
-            char str[100];
-            fgets (str, 100, stdin);
             
-            NSString *inputString = [[NSString alloc] initWithUTF8String:str];
-            inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSString *orderString = [inputHandler inputForPrompt:@"Please pick your pizza size and toppings:\n> "];
             
-            NSLog(@"Input was %@", inputString);
+            NSLog(@"Input was %@", orderString);
+            
+            NSString *managerSelection = [inputHandler inputForPrompt:@"\nPlease enter 'main' for the main manager, 'assistant' for the assistant manager or none for no manager\n> "];
+            
+            if ([[managerSelection lowercaseString] isEqualToString:@"main"]) {
+                restaurantKitchen.delegate = manager;
+                
+                NSLog(@"Delegate set to manager");
+            } else if ([[managerSelection lowercaseString] isEqualToString:@"assistant"]) {
+                restaurantKitchen.delegate = coManager;
+                
+                NSLog(@"Delegate set to comanager");
+            } else {
+                restaurantKitchen.delegate = coManager;
+            }
             
             // separate inputString into array of strings --> commandWords
-            NSArray *commandWords = [inputString componentsSeparatedByString:@" "];
+            NSArray *commandWords = [orderString componentsSeparatedByString:@" "];
             
             // set pizzaSize string to the first element in the commandWords array
             NSString *pizzaSize = [commandWords objectAtIndex:0];
@@ -46,6 +63,8 @@ int main(int argc, const char * argv[])
             // tell restaurant kitchen to make the pizza, pass in the class method to convert pizza size into the enum datatype
             // pass in toppings array as second parameter
             Pizza *myPizza = [restaurantKitchen makePizzaWithSize:[Pizza pizzaSizeStringToSize:pizzaSize] toppings:toppings];
+            
+            NSLog(@"%@", myPizza);
             
         }
 
