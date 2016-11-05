@@ -21,10 +21,9 @@
         if (upgradeReceived) {
             
             Pizza *pizza = [[Pizza alloc] initWithSize:large andWithToppings:toppings];
-            
             [self.delegate kitchenDidMakePizza:pizza];
-            
             return pizza;
+            
         } else {
             
             Pizza *pizza = [[Pizza alloc] initWithSize:size andWithToppings:toppings];
